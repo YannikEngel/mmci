@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>BetTer</title>
+        </head>
+        <body>
+            <div id=" csvdiv"> 
+                <input id= csv type="file">
+                Schritt 1: Zuerst .csv Datei hochladen!
+            </div>
+
+            <div id="label-container" hidden></div>
+            <img id="imagePreview" style="height:300px;">
+
+            <input id="imageUpload" type="file">
+            Schritt 2: Dann ein Logo des Heim-Vereins! (Es werden nur Vereine der 1.Bundesliga-Geschichte korrekt verarbeitet)
+
+            <div id="label-container" hidden></div>
+
+            <div id="label-container" hidden></div>
+
+            <img id="imagePreview" style="height:300px;">
+
+            <div id="label-container" hidden></div>
+
+            <div id="left">
+            <img id="imagePreview2" style="height:300px; left:300px"> 
+
+            <input id="imageUpload2" type="file">
+            Schritt 3: Zuletzt ein Logo des Gast-Vereins! (Es werden nur Vereine der 1.Bundesliga-Geschichte korrekt verarbeitet)
+
+            <div id="label-container2" hidden></div>
+
+            <div id="label-container" hidden></div>
+
+            <img id="text-container">
+
+            <form id="textform">
+                <select name="verein1" id="verein1">
+                    <option value="1860">1860 München</option>
+                    <option value="1. FC Köln">1. FC Köln</option>
+                    <option value="Aachen">Alemannia Aachen</option>
+                    <option value="Augsburg">FC Augsburg</option>
+                    <option value="Bayern">FC Bayern München</option>
+                    <option value="Bielefeld">Arminia Bielefeld</option>
+                    <option value="Bochum">VfL Bochum</option>
+                    <option value="Braunschweig">Eintracht Braunschweig</option>
+                    <option value="Bremen">Werder Bremen</option>
+                    <option value="BW Berlin">Blau-Weiss Berlin</option>
+                    <option value="Cottbus">Energie Cottbus</option>
+                    <option value="Darmstadt">SV Darmstadt</option>
+                    <option value="Dortmund">Borussia Dortmund</option>
+                    <option value="Dresden">Dynamo Dresden</option>
+                    <option value="Duisburg">MSV Duisburg</option>
+                    <option value="Essen">Rot-Weiss Essen</option>
+                    <option value="Fortuna Düsseldorf">Fortuna Düsseldorf</option>
+                    <option value="Fortuna Köln">Fortuna Köln</option>
+                    <option value="Frankfurt">Eintracht Frankfurt</option>
+                    <option value="Freiburg">SC Freiburg</option>
+                    <option value="Fürth">Greuther Fürth</option>
+                    <option value="Gladbach">Borussia M'Gladbach</option>
+                    <option value="Hamburg">Hamburger SV</option>
+                    <option value="Hannover">Hannover 96</option>
+                    <option value="Heidenheim">FC Heidenheim</option>
+                    <option value="Hertha">Hertha BSC</option>
+                    <option value="Hoffenheim">TSG 1899 Hoffenheim</option>
+                    <option value="Homburg">FC Homburg</option>
+                    <option value="Ingolstadt">FC Ingolstadt</option>
+                    <option value="Kaiserslautern">1. FC Kaiserslautern</option>
+                    <option value="Karlsruhe">Karlsruher SC</option>
+                    <option value="Kiel">Holstein Kiel</option>
+                    <option value="Leverkusen">Bayer 04 Leverkusen</option>
+                    <option value="Mainz">FSV Mainz 05</option>
+                    <option value="Mannheim">Waldhof Mannheim</option>
+                    <option value="Münster">Preußen Münster</option>
+                    <option value="Neunkirchen">Borussia Neunkirchen</option>
+                    <option value="Nürnberg">1. FC Nürnberg</option>
+                    <option value="Oberhausen">Rot-Weiss Oberhausen</option>
+                    <option value="Offenbach">Offenbacher Kickers</option>
+                    <option value="Paderborn">SC Paderborn</option>
+                    <option value="Schalke">FC Schalke 04</option>
+                    <option value="Pauli">FC St. Pauli</option>
+                    <option value="RB Leipzig">RB Leipzig</option>
+                    <option value="Rostock">Hansa Rostock</option>
+                    <option value="Saarbrücken">FC Saarbrücken</option>
+                    <option value="Stuttgarter Kickers">Stuttgarter Kickers</option>
+                    <option value="Tasmania Berlin">Tasmania Berlin</option>
+                    <option value="Tennis Borussia Berlin">Tennis Borussia Berlin</option>
+                    <option value="Uerdingen">KFC Uerdingen</option>
+                    <option value="Ulm">SSV Ulm</option>
+                    <option value="Union Berlin">1. FC Union Berlin</option>
+                    <option value="Unterhaching">SpVgg Unterhaching</option>
+                    <option value="VfB Leipzig">Lokomotive Leipzig</option>
+                    <option value="VfB Stuttgart">vfB Stuttgart</option>
+                    <option value="Wattenscheid">SG Wattenscheid 09</option>
+                    <option value="Wolfsburg">VfL Wolfsburg</option>
+                    <option value="Wuppertal">Wuppertaler SV</option>
+                </select>
+                <select name="verein2" id="verein2">
+                    <option value="1860">1860 München</option>
+                    <option value="1. FC Köln">1. FC Köln</option>
+                    <option value="Aachen">Alemannia Aachen</option>
+                    <option value="Augsburg">FC Augsburg</option>
+                    <option value="Bayern">FC Bayern München</option>
+                    <option value="Bielefeld">Arminia Bielefeld</option>
+                    <option value="Bochum">VfL Bochum</option>
+                    <option value="Braunschweig">Eintracht Braunschweig</option>
+                    <option value="Bremen">Werder Bremen</option>
+                    <option value="BW Berlin">Blau-Weiss Berlin</option>
+                    <option value="Cottbus">Energie Cottbus</option>
+                    <option value="Darmstadt">SV Darmstadt</option>
+                    <option value="Dortmund">Borussia Dortmund</option>
+                    <option value="Dresden">Dynamo Dresden</option>
+                    <option value="Duisburg">MSV Duisburg</option>
+                    <option value="Essen">Rot-Weiss Essen</option>
+                    <option value="Fortuna Düsseldorf">Fortuna Düsseldorf</option>
+                    <option value="Fortuna Köln">Fortuna Köln</option>
+                    <option value="Frankfurt">Eintracht Frankfurt</option>
+                    <option value="Freiburg">SC Freiburg</option>
+                    <option value="Fürth">Greuther Fürth</option>
+                    <option value="Gladbach">Borussia M'Gladbach</option>
+                    <option value="Hamburg">Hamburger SV</option>
+                    <option value="Hannover">Hannover 96</option>
+                    <option value="Heidenheim">FC Heidenheim</option>
+                    <option value="Hertha">Hertha BSC</option>
+                    <option value="Hoffenheim">TSG 1899 Hoffenheim</option>
+                    <option value="Homburg">FC Homburg</option>
+                    <option value="Ingolstadt">FC Ingolstadt</option>
+                    <option value="Kaiserslautern">1. FC Kaiserslautern</option>
+                    <option value="Karlsruhe">Karlsruher SC</option>
+                    <option value="Kiel">Holstein Kiel</option>
+                    <option value="Leverkusen">Bayer 04 Leverkusen</option>
+                    <option value="Mainz">FSV Mainz 05</option>
+                    <option value="Mannheim">Waldhof Mannheim</option>
+                    <option value="Münster">Preußen Münster</option>
+                    <option value="Neunkirchen">Borussia Neunkirchen</option>
+                    <option value="Nürnberg">1. FC Nürnberg</option>
+                    <option value="Oberhausen">Rot-Weiss Oberhausen</option>
+                    <option value="Offenbach">Offenbacher Kickers</option>
+                    <option value="Paderborn">SC Paderborn</option>
+                    <option value="Schalke">FC Schalke 04</option>
+                    <option value="Pauli">FC St. Pauli</option>
+                    <option value="RB Leipzig">RB Leipzig</option>
+                    <option value="Rostock">Hansa Rostock</option>
+                    <option value="Saarbrücken">FC Saarbrücken</option>
+                    <option value="Stuttgarter Kickers">Stuttgarter Kickers</option>
+                    <option value="Tasmania Berlin">Tasmania Berlin</option>
+                    <option value="Tennis Borussia Berlin">Tennis Borussia Berlin</option>
+                    <option value="Uerdingen">KFC Uerdingen</option>
+                    <option value="Ulm">SSV Ulm</option>
+                    <option value="Union Berlin">1. FC Union Berlin</option>
+                    <option value="Unterhaching">SpVgg Unterhaching</option>
+                    <option value="VfB Leipzig">Lokomotive Leipzig</option>
+                    <option value="VfB Stuttgart">vfB Stuttgart</option>
+                    <option value="Wattenscheid">SG Wattenscheid 09</option>
+                    <option value="Wolfsburg">VfL Wolfsburg</option>
+                    <option value="Wuppertal">Wuppertaler SV</option>
+                </select>
+                <button type="submit" id="submit">Berechnen</button>
+            </form>
+            Oder .csv hochladen und dann die Vereine hier auswählen!
+
+            </div>
+
+            <div>
+                <h1>BetTer Spielergebnis:</h1>
+            <p><sp an id="ausgabe">Bitte .csv und Logos hochladen!</span></p>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script type="text/javascript">
+                // Code-Quellen: https://gist.github.com/chris-chris/8e41e4431e808b55ba2691171f13591b/revisions
+                //               https://teachablemachine.withgoogle.com/train/image
+                // Daten-Quelle: http://www.bulibox.de/abschlusstabellen/
+                /* Bildtrainingsdaten:  https://www.kaggle.com/datasets/alexteboul/top-5-football-leagues-club-logos?resource=download
+                                        https://www.bundesliga-reisefuehrer.de/de/zweite_bundesliga
+                                        https://www.stickpng.com/de/cat/sport/insekten/bundesliga-deutsche-fusballvereine-logos?page=1
+                                        https://de.soccerwiki.org/country.php?countryId=GER
+                                        https://www.footballkitarchive.com/de/bundesliga-kits/
+                                        https://www.transfermarkt.de/
+                                        https://de.wikipedia.org/wiki/Wikipedia:Hauptseite
+                                        https://www.dfb.de/bundesliga/saisonplan/
+                                        https://virtual.bundesliga.com/de/tabelle/club-championship/2023-2024/liga
+                                        https://www.ndr.de/sport/ergebnisse/fussball/2024-2025/Alle-Ergebnisse-2-Bundesliga-Fussball-2024-2025,fussballmaenner2266.html
+                                        https://www.bundesliga.com/de/2bundesliga/clubs
+                                        https://www.dfb.de/bundesliga/statistik/ewige-tabelle/?no_cache=1
+                                        https://ivo.berlin/zweite-fussballbundesliga-logo-tabelle
+                                        https://www.fussball.de/
+                                        https://www.fussballdaten.de/bundesliga/ewige-tabelle/ 
+                                        Websiten der Vereine und Google */
+
+                const URL = "https://teachablemachine.withgoogle.com/models/HnU1ZmKuT/";
+                
+
+                let model, webcam, labelContainer, labelContainer2, maxPredictions, maxPredictions2;
+                var team1; // var für erstes Vereinslogo
+                var team2; // var für zweites Vereinslogo
+
+                //Setup für erstes Bild
+                async function init() {
+                    const modelURL = URL + "model.json";
+                    const metadataURL = URL + "metadata.json";
+                    model = await tmImage.load(modelURL, metadataURL);
+                    maxPredictions = model.getTotalClasses();
+                    labelContainer = document.getElementById("label-container");
+
+                    for (let i = 0; i < maxPredictions; i++) { 
+                        labelContainer.appendChild(document.createElement("div"));
+                    }
+                }
+
+                //Setup für zweites Bild
+                async function init2() {
+                    const modelURL = URL + "model.json";
+                    const metadataURL = URL + "metadata.json";
+                    model = await tmImage.load(modelURL, metadataURL);
+                    maxPredictions2 = model.getTotalClasses();
+                    labelContainer2 = document.getElementById("label-container2");
+
+                    for (let i = 0; i < maxPredictions2; i++) { 
+                        labelContainer2.appendChild(document.createElement("div"));
+                    }
+                }
+
+                // Funktion zum Bestimmen des Vereins im ersten Bild
+                async function predict() {
+                    var image = document.getElementById('imagePreview');
+                    const prediction = await model.predict(image, false);
+                    var correctClass ="";
+                    var highestProbability = 0;
+
+                    for (let i = 0; i < maxPredictions; i++) {
+                        const classPrediction =
+                            prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                        labelContainer.childNodes[i].innerHTML = classPrediction;
+                        if(prediction[i].probability > highestProbability) {
+                            highestProbability = prediction[i].probability;
+                            correctClass = prediction[i].className;
+                        } 
+                    }
+                    team1 = correctClass;
+                    // console.log(team1 + "predict");
+                    return correctClass;
+                }
+
+                // Funktion zum Bestimmen des Vereins im zweiten Bild
+                async function predict2() {
+                    var image = document.getElementById('imagePreview2');
+                    const prediction2 = await model.predict(image, false);
+                    var correctClass ="";
+                    var highestProbability = 0;
+                    
+                    for (let i = 0; i < maxPredictions; i++) {
+                        const classPrediction =
+                            prediction2[i].className + ": " + prediction2[i].probability.toFixed(2);
+                        labelContainer.childNodes[i].innerHTML = classPrediction;
+                        if(prediction2[i].probability > highestProbability) {
+                            highestProbability = prediction2[i].probability;
+                            correctClass = prediction2[i].className;
+                        } 
+                    }
+                    team2 = correctClass;
+                    // console.log(team2 + "predict");
+                    return correctClass;
+                }
+
+            // Funktion ruft predict auf und startet callCalc
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imagePreview').attr('src', e.target.result);
+                        $('#imagePreview').hide();
+                        $('#imagePreview').fadeIn(650);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(() => {
+                        team1 = predict();
+                        predict();
+                        // console.log("readURL 1")
+                        callCalc(team1, team2);
+                    });
+                }
+            }
+
+            // Funktion welche das berechnen der Spielergebnisse startet, startet die Berechnung nur wenn beide Vereine da sind
+            // gibt Ergebnisstext an html weiter zur Ausgabe auf dem Screen
+            async function callCalc(team1, team2){
+                if(team1 && team2){
+                    await calc(team1, team2);
+                    var text = await calc(team1, team2);
+                    document.getElementById('ausgabe').textContent = text;
+                    sprachausgabe(text);
+                    // console.log(text);
+                }
+            }
+
+            // Event-Listener, der auf eine Änderung bei dem ersten Bild Upload wartet
+            $('#imageUpload').change(function () {
+                readURL(this);
+            });
+
+            //Code für nutzung mit dropdown menüs
+            let submit = document.getElementById('submit');
+            submit.onclick = function(event) {
+                event.preventDefault();
+
+                team1 = document.getElementById('verein1').value;
+                team2 = document.getElementById('verein2').value;
+                // console.log(team1 + team2)
+                callCalc(team1, team2);
+            };
+
+            // Funktion ruft predict auf und startet callCalc
+            async function readURL2(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imagePreview2').attr('src', e.target.result);
+                        $('#imagePreview2').hide();
+                        $('#imagePreview2').fadeIn(650);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                    await init2();
+                    team2 = await predict2();
+                    // console.log("readURL 2");
+                    callCalc(team1, team2);
+                }
+            }
+
+            // Event-Listener, der auf eine Änderung bei dem zweiten Bild Upload wartet
+            $('#imageUpload2').change(function () {
+                readURL2(this);
+            });
+
+            var results;
+
+            // Event-Listener, der auf Änderung in csv Upload reagiert und csv zu einem Arr parsed
+            document.getElementById('csv').addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const csvText = e.target.result;
+                        results = parseCSV(csvText);
+                    };
+                    reader.readAsText(file);
+                }
+            });
+        
+            // Funktion welche .csv zu Arr parsed
+            function parseCSV(csvText) {
+                const rows = csvText.split(/\r?\n/); 
+                return rows.map(row => row.split(';'));
+            }
+
+            function sprachausgabe(tts) { 
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = tts;
+            
+                speechSynthesis.speak(msg);  
+            }
+
+
+            //Funktion welche den Leistungsscore der Teams berechnet und daraus ein Ergebnis berechnet und als Text zurück gibt
+            function calc(team1, team2){
+                //Check ob zwei Teams da sind, sollte niemals anschlagen
+                if(!team1 || !team2){
+                    return;
+                } 
+                //Check ob zwei unterschiedliche Teams da sind, falls zwei mal der selbe Verein da ist gibt es eine Fehlermeldung aus
+                if(team1 === team2){
+                    return "Es müssen zwei unterschiedliche Vereine eingegeben werden!";
+                }
+
+                //vars für Berechnung des Scores
+                var weight1 = 1;
+                var weight2 = 1
+                var score1 = 0;
+                var score2 = 0;
+
+                //for-loop geht gesamte csv Datei durch
+                for(let i = 0; i < results.length; i++){  
+                    // console.log("testEINS" + i + team1);
+                    // console.log("Score: " + score1);
+                    // console.log("testZWEI" + i + team2);
+                    // console.log("Score: " + score2);
+
+                    // relevante werte für Berechnung des Scores
+                    let Home = results[i][2];
+                    let Goals_Home = results[i][3];
+                    let Goals_Away = results[i][4];
+                    let Away = results[i][5]; 
+
+                    //Leerzeichen entfernen
+                    Home = Home.trim();
+                    Away = Away.trim(); 
+                    // console.log(Home + Goals_Home + Goals_Away + Away)
+                    // console.log(results[i][2] + results[i][3] + results[i][4] + results[i][5])
+
+                    //check: hat das Team am Spiel teilgenommen
+                    if (team1 === Home || team1 === Away) {
+                        //check: hat das zweite team auch teilgenommen, dann weight erhöhen
+                        if (team2 === Home || team2 === Away) {
+                            weight1 = 1.5;
+                        }
+                    
+                        //check: ist das aktuelle Heimteam auch im jetzt betrachteten Spiel heimteam, dann weight erhöhen
+                        if (team1 === Home) {
+                            weight1 += 0.5;
+                        }
+                    
+                        //check: gibt es einen Sieger?
+                        if (Goals_Home != Goals_Away) {
+                            //check: hat team1 damals gewonnen, dann erhöhe Leistungsscore und Gamecount (Heimspiele)
+                            if (team1 === Home && Goals_Home > Goals_Away) {
+                                score1 += weight1 * ((Goals_Home - Goals_Away) ); 
+                                continue;
+                            }
+                    
+                            // check: hat team1 damals gewonnen, dann erhöhe Leistungsscore und Gamecount (Auswärtsspiele)
+                            if (team1 === Away && Goals_Away > Goals_Home) {
+                                score1 += weight1 * ((Goals_Away - Goals_Home)); 
+                                continue;
+                            }
+                    
+                            //check: hat team1 damals verloren, dann Leistungsscore senken und Gamecount erhöhen (Heimspiele)
+                            if (team1 === Home && Goals_Home < Goals_Away) {
+                                score1 -= weight1 * (Goals_Away - Goals_Home); 
+                                continue;
+                            }
+                    
+                            //check: hat team1 damals verloren, dann Leistungsscore senken und Gamecount erhöhen (Auswärtsspiele)
+                            if (team1 === Away && Goals_Away < Goals_Home) {
+                                score1 -= weight1 * (Goals_Home - Goals_Away);
+                                continue;
+                            }
+                        }
+                    
+                        //check: Unentschieden, dann Leistungsscore und gamecount erhöhen
+                        if (Goals_Home === Goals_Away) {
+                            score1 += weight1 * 1;
+                            continue;
+                        }
+                    }
+                    
+                    //check: hat das Team am Spiel teilgenommen
+                    if (team2 === Home || team2 === Away) {
+                        //check: hat das zweite team auch teilgenommen, dann weight erhöhen
+                        if (team1 === Home || team1 === Away) {
+                            weight2 = 1.5; 
+                        }
+                    
+                        //check: ist das aktuelle Auswärtsteam auch im jetzt betrachteten Spiel Auswärtsteam, dann weight erhöhen
+                        if (team2 === Away) {
+                            weight2 += 0.5;
+                        }
+                    
+                        //check: gibt es einen Sieger?
+                        if (Goals_Home != Goals_Away) {
+                            //check: hat team2 damals gewonnen, dann erhöhe Leistungsscore und Gamecount (Heimspiele)
+                            if (team2 === Home && Goals_Home > Goals_Away) {
+                                score2 += weight2 * ((Goals_Home - Goals_Away)); 
+                                continue;
+                            }
+                    
+                            // check: hat team2 damals gewonnen, dann erhöhe Leistungsscore und Gamecount (Auswärtsspiele)
+                            if (team2 === Away && Goals_Away > Goals_Home) {
+                                score2 += weight2 * ((Goals_Away - Goals_Home));
+                                continue;
+                            }
+                    
+                            //check: hat team2 damals verloren, dann Leistungsscore senken und Gamecount erhöhen (Heimspiele)
+                            if (team2 === Home && Goals_Home < Goals_Away) {
+                                score2 -= weight2 * (Goals_Away - Goals_Home);
+                                continue;
+                            }
+                    
+                            //check: hat team2 damals verloren, dann Leistungsscore senken und Gamecount erhöhen (Auswärtsspiele)
+                            if (team2 === Away && Goals_Away < Goals_Home) {
+                                score2 -= weight2 * (Goals_Home - Goals_Away);
+                                continue;
+                            }
+                        }
+                    
+                        //check: Unentschieden, dann Leistungsscore und gamecount erhöhen
+                        if (Goals_Home === Goals_Away) {
+                            score2 += weight2 * 1;
+                            continue;
+                        }
+                    }           
+                }
+
+                // Korrektur negativer scores
+                if(score1 < 0 && score2 < 0) {
+                    score1 = Math.abs(score2);
+                    score2 = Math.abs(score1);
+                } else if (score1 < 0 || Math.abs(score1) > score2) {
+                    score1 = Math.abs(score1) - score2;
+                    score2 = Math.abs(score2);
+                } else if (score2 < 0 || Math.abs(score2) > score1) {
+                    score1 = Math.abs(score1);
+                    score2 = Math.abs(score2) - score1;
+                } else {
+                    score1 = Math.abs(score1);
+                    score2 = Math.abs(score2);
+                }
+
+                //maximale random anpassung des Ergebnisses
+                var max = 1.1;
+                var maxGoals = 5;
+
+                var surprise = Math.random(0, 100);
+
+                // check Wahrscheinlichkeite eines überraschenden Spiels 
+                if(surprise > 75){
+                    max = 3;
+                    maxGoals = 8
+                }
+
+                // check Wahrscheinlichkeit eines highscoring Spiels
+                if(surprise > 98){
+                    max = 5;
+                    maxGoals = 12;
+                }
+
+                //Berechnung der Ergebnisse bei Mannschaften ohne Bundesligaspiel (aktuell nur Holstein Kiel, weil erster Aufstieg)
+                if(score1 == 0 || score2 == 0){
+                    var random = Math.floor(Math.random() * 3);
+                    score1 = random + Math.abs(Math.floor(Math.random() * max));
+                    score2 = random + Math.abs(Math.floor(Math.random() * max));
+                } else {
+                
+                //while-Schleife die läuft bis ein "realistisches Ergebnis" berechnet wurde    
+                while(score1 > maxGoals || score2 > maxGoals){
+                    if(score1 > score2){
+                        score1 = Math.abs((Math.floor(score1 / score2)) + Math.floor(Math.random() * max));
+                        score2 = Math.abs((Math.floor(score2 / score2)) + Math.floor(Math.random() * max));
+                    } else {
+                        score1 = Math.abs((Math.floor(score1 / score1)) + Math.floor(Math.random() * max));
+                        score2 = Math.abs((Math.floor(score2 / score1)) + Math.floor(Math.random() * max));
+                    } 
+                }
+            }
+
+                // Ergebniss zu Text Berechnung
+                var result = ""
+                if(score1 > score2){
+                    result = "" + team1 + " gewinnt " + score1 + " zu " + score2 + " gegen " + team2 + "!";
+                } else if(score1 < score2){
+                    result = "" + team1 + " verliert " + score1 + " zu " + score2 + " gegen " + team2 + "!";
+                } else if(score1 == score2){
+                    result = "" + team1 + " und " + team2 + " spielen " + score1 + " zu " + score2 + " Unentschieden!"; 
+                }
+                // console.log(result);
+                return result;
+            }
+
+            </script>
+        </body>
+    </html>
