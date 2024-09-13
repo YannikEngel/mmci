@@ -1,5 +1,5 @@
 data.csv beinhaltet alle Spiele der Bundesliga Geschichte bis einschließlich letzte Saison
-diese Datei muss zu aktuellen Zeitpunkt noch mit im Formular meines Formulars hochgeladen werden (Work-Around)
+diese Datei muss zu aktuellen Zeitpunkt noch mit im Formular meines Projektes hochgeladen werden (Work-Around)
 
 index.html ist die Software selbst, es sollte beim Start der Datei alles verfügbar sein, was die Software braucht
 
